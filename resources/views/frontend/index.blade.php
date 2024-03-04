@@ -55,7 +55,7 @@
                                 @endif
                                 <div class="content">
                                     <h3>{{$cat->title}}</h3>
-                                        <a href="{{route('product-cat',$cat->slug)}}">Khám phá ngay</a>
+                                        <a href="{{route('product-cat',$cat->slug)}}">Khám</a>
                                 </div>
                             </div>
                         </div>
