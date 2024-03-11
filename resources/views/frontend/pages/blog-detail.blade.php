@@ -34,7 +34,7 @@
                                 <div class="blog-detail">
                                     <h2 class="blog-title">{{$post->title}}</h2>
                                     <div class="blog-meta">
-                                        <span class="author"><a href="javascript:void(0);"><i class="fa fa-user"></i>Bởi {{$post->author_info['name']}}</a><a href="javascript:void(0);"><i class="fa fa-calendar"></i>{{$post->created_at->format('M d, Y')}}</a><a href="javascript:void(0);"><i class="fa fa-comments"></i>Bình luận ({{$post->allComments->count()}})</a></span>
+                                        <span class="author"><a href="javascript:void(0);"><i class="fa fa-user"></i>Bởi {{$post->author_info['name']}}</a><a href="javascript:void(0);"><i class="fa fa-calendar"></i>{{$post->created_at->format('d/m/Y')}}</a><a href="javascript:void(0);"><i class="fa fa-comments"></i>Bình luận ({{$post->allComments->count()}})</a></span>
                                     </div>
                                     <div class="sharethis-inline-reaction-buttons"></div>
                                     <div class="content">
@@ -156,7 +156,7 @@
                                     <div class="content">
                                         <h5><a href="#">{{$post->title}}</a></h5>
                                         <ul class="comment">
-                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>{{$post->created_at->format('d M, y')}}</li>
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>{{$post->created_at->format('d/m/Y')}}</li>
                                             <li><i class="fa fa-user" aria-hidden="true"></i>
                                                 {{$post->author_info->name ?? 'Anonymous'}}
                                             </li>

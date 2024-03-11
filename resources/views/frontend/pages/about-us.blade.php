@@ -33,18 +33,15 @@
 							<h3>Chào mừng bạn đến với <span>Cá cảnh N5</span></h3>
 							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
 							<div class="button">
-								<a href="{{route('blog')}}" class="btn">Blog của chúng tôi</a>
+								<a href="{{route('blog')}}" class="btn">Bài viết của chúng tôi</a>
 								<a href="{{route('contact')}}" class="btn primary">Liên hệ với chúng tôi</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-12">
-						<div class="about-img overlay">
-							<div class="button">
-								<a href="https://www.youtube.com/watch?v=7edcgCdiHVU" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
-							</div>
+						
 							<img src="@foreach($settings as $data) {{$data->photo}} @endforeach" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
-						</div>
+						
 					</div>
 				</div>
 			</div>

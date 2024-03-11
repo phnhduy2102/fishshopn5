@@ -27,7 +27,7 @@
         </div>
         <div class="form-group mb-3">
           <button type="reset" class="btn btn-warning">Làm lại</button>
-           <button class="btn btn-success" type="submit">Nộp</button>
+           <button class="btn btn-success" type="submit">Thêm</button>
         </div>
       </form>
     </div>

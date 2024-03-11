@@ -22,7 +22,7 @@
         <select name="status" id="" class="form-control">
           <option value="">--Chọn--</option>
           <option value="active" {{(($comment->status=='active')? 'selected' : '')}}>Bật</option>
-          <option value="inactive" {{(($comment->status=='inactive')? 'selected' : '')}}>Tắt 1</option>
+          <option value="inactive" {{(($comment->status=='inactive')? 'selected' : '')}}>Tắt</option>
         </select>
       </div>
       <button type="submit" class="btn btn-primary">Cập nhật</button>

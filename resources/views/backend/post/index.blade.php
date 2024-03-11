@@ -10,7 +10,7 @@
      </div>
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary float-left">Danh sách bài viết</h6>
-      <a href="{{route('post.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i>Thêm bài viết</a>
+      <a href="{{route('post.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Thêm bài viết</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -42,7 +42,6 @@
                     <td>{{$post->title}}</td>
                     <td>{{$post->cat_info->title}}</td>
                     <td>{{$post->tags}}</td>
-
                     <td>
                       @foreach($author_info as $data)
                           {{$data->name}}
@@ -116,7 +115,7 @@
             "columnDefs":[
                 {
                     "orderable":false,
-                    "targets":[8,9,10]
+                    "targets":[5,6,7]
                 }
             ]
         } );

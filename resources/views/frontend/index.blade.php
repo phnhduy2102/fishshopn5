@@ -40,7 +40,7 @@
     <div class="container-fluid">
         <div class="row">
             @php
-            $category_lists=DB::table('categories')->where('status','active')->limit(5)->get();
+            $category_lists=DB::table('categories')->where('status','active')->limit(8)->get();
             @endphp
             @if($category_lists)
                 @foreach($category_lists as $cat)
@@ -55,7 +55,7 @@
                                 @endif
                                 <div class="content">
                                     <h3>{{$cat->title}}</h3>
-                                        <a href="{{route('product-cat',$cat->slug)}}">Khám phá ngay!</a>
+                                        <a href="{{route('product-cat',$cat->slug)}}">Khám phá ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -74,34 +74,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Sản phẩm mới</h2>
+                        <h2>Sản phẩm nổi bật</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="product-info">
-                        <div class="nav-main">
-                            <!-- Tab Nav -->
-                            <ul class="nav nav-tabs filter-tope-group" id="myTab" role="tablist">
-                                @php
-                                    $categories=DB::table('categories')->where('status','active')->where('is_parent',1)->get();
-                                    // dd($categories);
-                                @endphp
-                                @if($categories)
-                                <button class="btn" style="background:black"data-filter="*">
-                                    Sản phẩm mới
-                                </button>
-                                    @foreach($categories as $key=>$cat)
-
-                                    <button class="btn" style="background:none;color:black;"data-filter=".{{$cat->id}}">
-                                        {{$cat->title}}
-                                    </button>
-                                    @endforeach
-                                @endif
-                            </ul>
-                            <!--/ End Tab Nav -->
-                        </div>
                         <div class="tab-content isotope-grid" id="myTabContent">
     @php
         $recentlyAddedProducts = DB::table('products')
@@ -326,7 +305,7 @@
                         <div class="shop-single-blog">
                             <img src="{{$post->photo}}" alt="{{$post->photo}}">
                             <div class="content">
-                                <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
+                                <p class="date">{{$post->created_at->format('d/m/Y')}}</p>
                                 <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
                                 <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Đọc thêm</a>
                             </div>
