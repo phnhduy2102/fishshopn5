@@ -55,7 +55,7 @@
                                 <?php endif; ?>
                                 <div class="content">
                                     <h3><?php echo e($cat->title); ?></h3>
-                                        <a href="<?php echo e(route('product-cat',$cat->slug)); ?>">Khám phá ngay</a>
+                                        <a href="<?php echo e(route('product-cat',$cat->slug)); ?>">Khám phá ngay!</a>
                                 </div>
                             </div>
                         </div>
