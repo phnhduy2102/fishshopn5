@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 html {
     font-family:Arial, Helvetica, sans-serif;
     -moz-text-size-adjust: 100%;
@@ -161,7 +162,7 @@ select,
 optgroup,
 textarea {
     color: #424646;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:nunito, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
