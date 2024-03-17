@@ -9,7 +9,7 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="<?php echo e(asset('backend/img/avatar.png')); ?>" alt="#"></a>
+								<a href="index.html"><img src="<?php echo e(asset('/storage/photos/1/banner/final.png')); ?>" alt="#"></a>
 							</div>
 							<?php
 								$settings=DB::table('settings')->get();
@@ -25,8 +25,6 @@
 							<h4>Thông tin</h4>
 							<ul>
 								<li><a href="<?php echo e(route('about-us')); ?>">Về chúng tôi</a></li>
-								<li><a href="#">Faq</a></li>
-								<li><a href="#">Điều khoản và điều kiện</a></li>
 								<li><a href="<?php echo e(route('contact')); ?>">Liên hệ chúng tôi</a></li>
 								
 							</ul>
@@ -38,11 +36,10 @@
 						<div class="single-footer links">
 							<h4>Dịch vụ </h4>
 							<ul>
-								<li>Phương thức thanh toán</li>
-								<li>Money-back</li>
-								<li>Returns</li>
-								<li>Dịch vụ giao hàng</li>
-								<li>Chính sách bảo mật</li>
+								<li><a href="/blog-detail/chinh-sach-thanh-toan">Chính sách thanh toán</a></li>
+								<li><a href="/blog-detail/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+								<li><a href="/blog-detail/chinh-sach-doi-tra-hang">Chính sách đổi trả</a></li>
+								<li><a href="/blog-detail/chinh-sach-bao-hanh">Chính sách bảo hành</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -59,8 +56,6 @@
 									<li><?php $__currentLoopData = $settings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php echo e($data->phone); ?> <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></li>
 								</ul>
 							</div>
-							<!-- End Single Widget -->
-							<div class="sharethis-inline-follow-buttons"></div>
 						</div>
 						<!-- End Single Widget -->
 					</div>

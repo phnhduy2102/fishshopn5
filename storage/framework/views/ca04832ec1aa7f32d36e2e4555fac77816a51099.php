@@ -40,7 +40,7 @@
     <div class="container-fluid">
         <div class="row">
             <?php
-            $category_lists=DB::table('categories')->where('status','active')->limit(5)->get();
+            $category_lists=DB::table('categories')->where('status','active')->limit(8)->get();
             ?>
             <?php if($category_lists): ?>
                 <?php $__currentLoopData = $category_lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -55,7 +55,7 @@
                                 <?php endif; ?>
                                 <div class="content">
                                     <h3><?php echo e($cat->title); ?></h3>
-                                        <a href="<?php echo e(route('product-cat',$cat->slug)); ?>">Khám phá ngay!</a>
+                                        <a href="<?php echo e(route('product-cat',$cat->slug)); ?>">Khám phá ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -74,35 +74,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Sản phẩm mới</h2>
+                        <h2>Sản phẩm nổi bật</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="product-info">
-                        <div class="nav-main">
-                            <!-- Tab Nav -->
-                            <ul class="nav nav-tabs filter-tope-group" id="myTab" role="tablist">
-                                <?php
-                                    $categories=DB::table('categories')->where('status','active')->where('is_parent',1)->get();
-                                    // dd($categories);
-                                ?>
-                                <?php if($categories): ?>
-                                <button class="btn" style="background:black"data-filter="*">
-                                    Sản phẩm mới
-                                </button>
-                                    <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
-                                    <button class="btn" style="background:none;color:black;"data-filter=".<?php echo e($cat->id); ?>">
-                                        <?php echo e($cat->title); ?>
-
-                                    </button>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                <?php endif; ?>
-                            </ul>
-                            <!--/ End Tab Nav -->
-                        </div>
                         <div class="tab-content isotope-grid" id="myTabContent">
     <?php
         $recentlyAddedProducts = DB::table('products')
@@ -325,7 +303,7 @@
                         <div class="shop-single-blog">
                             <img src="<?php echo e($post->photo); ?>" alt="<?php echo e($post->photo); ?>">
                             <div class="content">
-                                <p class="date"><?php echo e($post->created_at->format('d M , Y. D')); ?></p>
+                                <p class="date"><?php echo e($post->created_at->format('d/m/Y')); ?></p>
                                 <a href="<?php echo e(route('blog.detail',$post->slug)); ?>" class="title"><?php echo e($post->title); ?></a>
                                 <a href="<?php echo e(route('blog.detail',$post->slug)); ?>" class="more-btn">Đọc thêm</a>
                             </div>
